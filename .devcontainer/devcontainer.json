@@ -2,7 +2,8 @@
 	"name": "SOCKS5 Proxy Codespaces",
 	"image": "mcr.microsoft.com/devcontainers/universal:2",
 	"features": {
-		"ghcr.io/devcontainers-contrib/features/chisel:1": {}
+		"ghcr.io/devcontainers-contrib/features/chisel:1": {},
+		"ghcr.io/devcontainers-contrib/features/cloudflared:1": {}
 	},
-	"postAttachCommand": "chisel server --socks5 --auth 'root:{$PASSWORD1}'"
+	"postAttachCommand": "chisel server --socks5 --auth \"root:$PASSWORD1\" & cloudflared tunnel --url http://localhost:8080"
 }
