@@ -4,5 +4,5 @@
 	"features": {
 		"ghcr.io/devcontainers-contrib/features/chisel:1": {}
 	},
-	"postAttachCommand": "chisel server --socks5"
+	"postAttachCommand": "chisel server --socks5 --authfile /workspaces/SOCKS5-Proxy-Codespaces/users.json"
 }
